@@ -1,0 +1,22 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#row1, #row2, #row3, #row4, #row5{
+    display: flex;
+}
+
+.display{
+    width: 360px;
+    height: 100px;
+    background-color: brown;
+}
+
+.keys{
+    width: 90px;
+    height: 90px;
+    text-align: center;
+}
