@@ -44,6 +44,11 @@ document.addEventListener("DOMContentLoaded", function(){
     decimal.addEventListener("click", function(){
         addDecimal();
         currentScreen.textContent = currentValue;
+    });
+
+    del.addEventListener("click", function(){
+        removeLast();
+        currentScreen.textContent = currentValue;
     })
 });
 
@@ -67,7 +72,7 @@ function calculate(){
     else if(operator === "-"){
         previousValue -= currentValue;
     }
-    else if(operator === "*"){
+    else if(operator === "x"){
         previousValue *= currentValue;
     }else if(operator === "/"){
         previousValue /= currentValue;
@@ -82,3 +87,14 @@ function addDecimal(){
         currentValue += ".";
     }
 }
+
+function removeLast(){
+   currentValue = currentValue.slice(0, -1);
+}
+
+let btn = document.querySelectorAll("button");
+    btn.forEach((sound) => sound.addEventListener("click", function(){
+        let audio = document.querySelector("audio");
+        audio.volume = 0.3;
+        audio.play();
+    }));
